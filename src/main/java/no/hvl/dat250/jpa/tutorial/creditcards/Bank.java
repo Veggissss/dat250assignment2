@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Collection;
+import java.util.Set;
 
 @Getter
 @Entity
@@ -20,5 +20,5 @@ public class Bank {
     @Getter
     @Setter
     @OneToMany
-    private Collection<CreditCard> ownedCards;
+    private Set<CreditCard> ownedCards;
 }

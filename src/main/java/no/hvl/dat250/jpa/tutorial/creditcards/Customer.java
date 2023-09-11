@@ -1,7 +1,7 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Set;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,10 +21,10 @@ public class Customer {
     @OneToMany
     @Getter
     @Setter
-    private Collection<Address> Addresses = new ArrayList<>();
+    private Set<Address> Addresses;
 
     @OneToMany
     @Getter
     @Setter
-    private Collection<CreditCard> CreditCards = new ArrayList<>();
+    private Set<CreditCard> CreditCards;
 }
