@@ -18,12 +18,12 @@ public class Customer {
     @Setter
     private String name;
 
-    @OneToMany
+    @ManyToMany
     @Getter
     @Setter
     private Set<Address> Addresses;
 
-    @OneToMany
+    @ManyToMany
     @Getter
     @Setter
     private Set<CreditCard> CreditCards;
