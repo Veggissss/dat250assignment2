@@ -26,14 +26,13 @@ My initial thoughts where that there should be created 3 instead of 4 tables. I 
 
 ## Technical difficulties:
 
-1. When I finished implementing the classes I still got an Junit test error:
+1. When I finished implementing the classes I still got a Junit test error:
 Test failed:
 Expected :is <[no.hvl.dat250.jpa.tutorial.creditcards.Customer@646d810b]>
 Actual   :   <[no.hvl.dat250.jpa.tutorial.creditcards.Customer@646d810b]>
+- I fixed it by using Set<> instead of Collection<> inside the Customer and Bank class.
 
-I fixed it by using Set<> instead of Collection<> inside the Customer and Bank class.
 
-
-2. When trying to inspect the database in intelliJ I had a bit of another issue. 
-IntelliJ only provides version 2.1.210 of the h2 driver when I needed the 2.2.220 to work. 
-So I had to change the driver manually to the one downloaded by Maven to inspect the database diagrams.
+2. When trying to inspect the database in intelliJ I had another issue. 
+IntelliJ only provides version 2.1.210 of the h2 driver, but I needed the 2.2.220 version for it to work.
+I changed the h2 driver manually to the 2.2.220 that was downloaded by Maven and then database inspection worked.
